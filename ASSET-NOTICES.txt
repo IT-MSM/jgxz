@@ -1,0 +1,6 @@
+Brand icon asset notes
+
+- trust-center-logo.png was supplied by the website owner and is used unmodified in the header and centered hero.
+- whatsapp.svg and telegram.svg are from Bootstrap Icons, version 1.13.2. Bootstrap Icons is distributed under the MIT License: https://github.com/twbs/icons/blob/main/LICENSE.
+- vodafone-logo.svg is the Vodafone logo SVG from Wikimedia Commons: https://commons.wikimedia.org/wiki/File:Vodafone_Logo.svg. Wikimedia Commons identifies this geometric logo as public domain for copyright purposes and notes that trademark restrictions may still apply.
+- instapay-logo.png is the Egyptian InstaPay logo from Wikimedia Commons: https://commons.wikimedia.org/wiki/File:InstaPay_Logo.png, uploaded by Amrr2006 under CC BY-SA 4.0. It is used unmodified; the adjacent button text identifies the Egyptian InstaPay service. License: https://creativecommons.org/licenses/by-sa/4.0/.

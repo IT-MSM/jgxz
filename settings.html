@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#171716">
+  <meta name="robots" content="noindex,nofollow">
+  <title>إعدادات Trust Center</title>
+  <link rel="icon" type="image/png" href="assets/trust-center-logo.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800&family=Tajawal:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="settings-page">
+  <main class="settings-main">
+    <div class="settings-top">
+      <a class="settings-brand" href="index.html" aria-label="العودة إلى Trust Center"><span class="brand-mark"><img src="assets/trust-center-logo.png" alt="" width="64" height="60"></span><span><strong>Trust Center</strong><small>إعدادات الموقع</small></span></a>
+      <a class="settings-back" href="index.html">العودة للموقع <span aria-hidden="true">←</span></a>
+    </div>
+    <header class="settings-heading">
+      <p class="section-kicker">إدارة بيانات الموقع</p>
+      <h1>إعدادات المركز</h1>
+      <p>عدّل بيانات التواصل والدفع، ثم نزّل ملف الإعدادات وضعه في مستودع GitHub بدل الملف القديم. بعد حفظ التغيير في GitHub وإعادة النشر، تظهر القيم الجديدة لكل الزوار.</p>
+    </header>
+    <section class="settings-notice" aria-label="تنبيه مهم"><strong>الموقع ثابت بلا خادم:</strong> الحفظ هنا ينزّل ملفًا على جهازك فقط؛ ارفعه إلى GitHub ليظهر التغيير للزوار. رمز 0000 يخفي الصفحة فقط وليس حماية حقيقية؛ يمكن تجاوز رمز المتصفح أو فتح الملف مباشرة، لذلك لا تضع بيانات خاصة أو أسرارًا هنا.</section>
+    <section class="lock-card" id="admin-gate" aria-labelledby="gate-title">
+      <div class="lock-icon" aria-hidden="true"><svg class="icon" viewBox="0 0 24 24"><path d="M5 10h14v11H5z"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/><path d="M12 14v3"/></svg></div>
+      <h2 id="gate-title">إعدادات الموقع مخفية</h2>
+      <p>اكتب 0000 من لوحة مفاتيح الكمبيوتر في الصفحة الرئيسية، أو أدخل الرمز هنا.</p>
+      <form id="admin-gate-form">
+        <label class="form-label" for="admin-gate-code">رمز الإدارة</label>
+        <input class="form-control" id="admin-gate-code" type="password" inputmode="numeric" maxlength="4" autocomplete="off" required>
+        <button class="button button-primary gate-button" type="submit">فتح الإعدادات</button>
+        <p class="settings-status is-error" id="gate-error" role="alert" hidden>الرمز غير صحيح.</p>
+      </form>
+    </section>
+    <form class="settings-panel" id="settings-panel" hidden>
+      <h2>التواصل وإرسال الملفات</h2>
+      <div class="settings-grid">
+        <label class="form-label">رقم واتساب<input class="form-control" name="whatsapp" type="tel" inputmode="tel" autocomplete="tel" required></label>
+        <label class="form-label">رقم تليجرام<input class="form-control" name="telegram" type="tel" inputmode="tel" required></label>
+        <label class="form-label full-width">رابط فيسبوك<input class="form-control" name="facebookUrl" type="url" inputmode="url" placeholder="https://www.facebook.com/..."></label>
+      </div>
+      <h2>الدفع — الفترة الصباحية</h2>
+      <div class="settings-grid">
+        <label class="form-label">رقم Vodafone Cash صباحًا<input class="form-control" name="morningCash" type="tel" inputmode="tel" required></label>
+        <label class="form-label">رقم InstaPay صباحًا<input class="form-control" name="morningInstapay" type="tel" inputmode="tel" required></label>
+        <label class="form-label full-width">رابط InstaPay صباحًا<input class="form-control" name="morningInstapayLink" type="url" inputmode="url" placeholder="https://ipn.eg/S/..." required></label>
+      </div>
+      <h2>الدفع — الفترة المسائية</h2>
+      <div class="settings-grid">
+        <label class="form-label">رقم Vodafone Cash مساءً<input class="form-control" name="eveningCash" type="tel" inputmode="tel" required></label>
+        <label class="form-label">رقم InstaPay مساءً<input class="form-control" name="eveningInstapay" type="tel" inputmode="tel" required></label>
+        <label class="form-label full-width">رابط InstaPay مساءً<input class="form-control" name="eveningInstapayLink" type="url" inputmode="url" placeholder="https://ipn.eg/S/..." required></label>
+      </div>
+      <h2>العنوان والخريطة</h2>
+      <div class="settings-grid">
+        <label class="form-label full-width">العنوان الظاهر على الموقع<input class="form-control" name="address" type="text" required></label>
+        <label class="form-label full-width">كلمات البحث للخريطة<input class="form-control" name="mapQuery" type="text" required></label>
+      </div>
+      <h2>شبكة Wi-Fi للزوار</h2>
+      <div class="settings-grid">
+        <label class="form-label">اسم الشبكة<input class="form-control" name="wifiSSID" type="text" autocomplete="off" required></label>
+        <label class="form-label">كلمة مرور الشبكة<input class="form-control" name="wifiPassword" type="password" autocomplete="new-password" required></label>
+      </div>
+      <div class="settings-actions"><button class="button button-primary" id="download-settings" type="submit">تنزيل ملف الإعدادات</button></div>
+      <p class="settings-status" id="settings-status" role="status" aria-live="polite"></p>
+      <p class="settings-notice">طريقة Vodafone Cash الحالية محفوظة. راجع رقم المستلم والمبلغ على شاشة الهاتف قبل التأكيد. رابط InstaPay يفتح التطبيق ولا ينفذ التحويل نيابةً عنك.</p>
+      <p class="settings-notice">ملف الإعدادات عام على الموقع؛ كلمة مرور Wi-Fi الظاهرة تُستخدم لإنشاء رمز QR للزوار. لا تضع كلمات مرور خاصة أو بيانات سرية.</p>
+    </form>
+    <p class="settings-footer">Trust Center · المنصورة</p>
+  </main>
+  <svg class="svg-library" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"><symbol id="icon-book" viewBox="0 0 24 24"><path d="M12 7.5C9.5 5.8 6 5.4 3 6.3v12.2c3.2-1.1 6.4-.5 9 1.2 2.6-1.7 5.8-2.3 9-1.2V6.3c-3-.9-6.5-.5-9 1.2Z"/><path d="M12 7.5v12.2M6 9.4c1.5-.2 3 .1 4.2.8M18 9.4c-1.5-.2-3 .1-4.2.8"/></symbol></svg>
+  <script src="settings.js" defer></script>
+</body>
+</html>
